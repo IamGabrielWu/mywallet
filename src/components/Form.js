@@ -8,14 +8,18 @@ import {
 import { Wallet } from 'ethers';
 
 class Form extends Component<> {
+
+
   state={ email: '', password: '', address: '' };
 
   createAccount(email, password) {
     console.log(`${email}:${password}`);
+
     Wallet.fromBrainWallet(email, password).then((wallet) => {
       console.log(`Address: ${wallet.address}`);
       const address = wallet.address;
       this.setState({ address });
+      this.props.nav('Wallet', { email: this.state.email, address: this.state.address });
     });
   }
   render() {

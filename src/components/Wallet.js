@@ -5,6 +5,7 @@ import {
 } from 'react-native';
 
 const Wallet = (props) => (
+
     <View style={styles.walletStyle}>
       <Text style={styles.textStyle}>{props.email}</Text>
       <Text style={styles.textStyle}>{props.address}</Text>
@@ -25,7 +26,7 @@ const styles = {
       position: 'relative'
     },
     textStyle: {
-      fontSize: 20,
+      fontSize: 10,
     }
   };
 
