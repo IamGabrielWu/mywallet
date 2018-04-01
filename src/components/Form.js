@@ -3,7 +3,6 @@ import {
   View,
   TextInput,
   Button,
-  Alert,
   Text
 } from 'react-native';
 
